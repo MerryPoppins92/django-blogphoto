@@ -1,0 +1,79 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'portfolio/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'portfolio/animate.css' %}">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'portfolio/ionicons.min.css' %}">
+    <link rel="icon" href="{% static 'portfolio/logo.png' %}">
+    <title>Blog Photo</title>
+</head>
+<body class="bg-dark">
+<nav class="navbar navbar-expand-md navbar-light bg-warning">
+<div class="container">
+    <a class="navbar-brand linknav" href="{% url 'home' %}">
+         <img src="{% static 'portfolio/logo.png' %}" width="30" height="30" class="d-inline-block align-top">
+        <span>Blog Photo</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+                <li class="nav-item {{ completed }}">
+                    <a class="nav-link linknavbar" href="{% url 'home' %}">Home</a>
+                </li>
+                <li class="nav-item {{ completed }}">
+                    <a class="nav-link linknavbar" href="https://www.linkedin.com/in/merry-de-lassus-saint-genies-438601104/">About</a>
+                </li>  
+                <li class="nav-item {{ completed }}">
+                    <a class="nav-link linknavbar" href="https://www.instagram.com/merrypoppinns/?hl=fr">Instagram</a>
+                </li>  
+        </ul>
+    </div>
+</div>
+</nav>
+<div class="container containerblock">
+    
+{% block content %}{% endblock %}
+</div>
+<footer class="page-footer fixed-bottom font-small bg-warning mt-5">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-2">
+    <div class="container">
+  <div class="row justify-content-around">
+<div class="col-6 text-center">
+    <p class="pfooter">© 2020 Copyright:</p>
+</div>
+<div class="col-6">
+    <a href="https://www.instagram.com/merrypoppinns/?hl=fr"><i class="icone ion-social-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/merry-de-lassus-saint-genies-438601104/"><i class="icone iconelinkedin ion-social-linkedin"></i></a>
+</div>
+</div>
+</div>
+    
+
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="{% static 'jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'script.js' %}"></script>
+</body>
+</html>

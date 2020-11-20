@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+	<br>
+	<h2 class="text-center">Quelques Curiosites</h2>
+  <div class="row justify-content-around">
+  	{% for bloggo in bloggos %}
+    <div class="col-lg col-md-3 col-sm-4 col-xs-6 text-center dernier">
+ <br>   
+ <a class="navblog" href="{% url 'bloggo:detailgo' bloggo.slug %}">  
+<img src="{{ bloggo.image1.url }}" height=120 width=120 class="rounded-circle photostyle">
+<br>
+
+<h4>{{ bloggo.title }}</h4></a>
+<h6>{{ bloggo.date }}</h6>
+<p>{{ bloggo.description1|striptags|truncatechars:35 }}</p>
+
+<!-- {% if project.url %}
+<a href="{{ project.url }}">link</a>
+{% endif %} -->
+
+
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

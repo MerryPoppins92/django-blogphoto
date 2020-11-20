@@ -1,0 +1,22 @@
+
+
+
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<h1>{{ blog.title }}</h1>
+<h5>{{ blog.date }}</h5>
+<h2>{{ blog.description }}</h2>
+
+
+<img src="{{ blog.image1.url }}"><br><br>
+<img src="{{ blog.image2.url }}"><br><br>
+<img src="{{ blog.image3.url }}" ><br><br>
+<img src="{{ blog.image4.url }}" ><br><br>
+<img src="{{ blog.image5.url }}" ><br><br>
+<img src="{{ blog.image6.url }}" ><br><br>
+<img src="{{ blog.image7.url }}" ><br><br>
+<img src="{{ blog.image8.url }}" ><br><br>
+{% endblock %}

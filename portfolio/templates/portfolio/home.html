@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br>
+<div class="container">
+<h1 class="text-center">Portfolio</h1>
+<br>
+	<div class="row justify-content-around">
+		<div class="col-sm-4 col-xs-6 mb-5 text-center dernier">   
+			<a class="navblog" href="{% url 'blogbuster:all_blogs' %}"> 
+			<h2 >{{ proj1.title }}</h2>
+			 
+			<p>{{ proj1.description }}</p>
+			<img src="{{ proj1.image.url }} "height=200 width=150 class="rounded-circle photostyle">
+			</a>
+		</div>
+		<div class="col-sm-4 col-xs-6 mb-5 text-center dernier"> 
+			<a class="navblog" href="{% url 'blogro:all_ro' %}"> 
+			<h2 >{{ proj2.title }}</h2>
+			 
+			<p>{{ proj2.description }}</p>
+			<img src="{{ proj2.image.url }} "height=200 width=150 class="rounded-circle photostyle">
+			</a>
+		</div> 
+		<div class="col-sm-4 col-xs-6 mb-5 text-center dernier">
+			<a class="navblog" href="{% url 'bloggo:all_go' %}">
+			<h2 >{{ proj3.title }}</h2>
+			<a class="navblog" href="{% url 'bloggo:all_go' %}">  
+			<p>{{ proj3.description }}</p>
+			<img src="{{ proj3.image.url }} "height=200 width=150 class="rounded-circle photostyle">
+			</a>
+		</div>
+	</div>
+</div>
+{% endblock %}

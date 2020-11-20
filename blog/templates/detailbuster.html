@@ -1,0 +1,67 @@
+
+
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<h1 class="text-center my-4">{{ blog.title }}</h1>
+<h5>{{ blog.date }}</h5>
+<div class="container">
+  <div class="row justify-content-around">
+<h6>{{ blog.description1 }}</h6>
+</div>
+</div>
+<br><br>
+
+<div class="container">
+  <div class="row justify-content-around">
+<div class="col-6 text-center">
+	<img src="{{ blog.image1.url }}" height=350 width=250 >
+</div>
+<div class="col-6">
+
+	<img src="{{ blog.image2.url }}" height=350 width=250 >
+</div>
+</div>
+</div>
+<br><br>
+
+<div class="container">
+  <div class="row justify-content-around">
+<div class="col-6 text-center js--wp-1">
+	<img src="{{ blog.image3.url }}" height=350 width=250 >
+</div>
+<div class="col-6 js--wp-1">
+
+	<img src="{{ blog.image4.url }}" height=350 width=250 >
+</div>
+</div>
+</div>
+<br><br>
+<div class="container">
+  <div class="row justify-content-around">
+<div class="col-6 text-center js--wp-2">
+	<img src="{{ blog.image5.url }}" height=350 width=250 >
+</div>
+<div class="col-6 js--wp-3">
+
+	<img src="{{ blog.image6.url }}" height=350 width=250 >
+</div>
+</div>
+</div>
+<br><br>
+<div class="container">
+  <div class="row justify-content-around">
+<div class="col-6 text-center js--wp-4">
+	<img src="{{ blog.image7.url }}" height=350 width=250 >
+</div>
+<div class="col-6 js--wp-4">
+
+	<img src="{{ blog.image8.url }}" height=350 width=250 >
+</div>
+</div>
+</div>
+<br><br>
+<br><br>
+{% endblock %}
